@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>calendar</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<script>
+		window.onload=function()
+		{
+			/*var arr=[
+				"1月快過年了"
+				"2月jkdjfkl"
+				"3majfklsjaflk"
+				] */
+			var oDiv=document.getElementById('tab');
+			var aLi=oDiv.getElementsByTagName('li');
+			var oTxt=oDiv.getElementsByTagName('div')[0];
+
+			for(var i=0; i<aLi.length; i++)
+			{
+				aLi[i].index=i;
+				aLi[i].onmouseover=function()
+				{
+					for(var i=0; i<aLi.length; i++)
+					{
+						aLi[i].className='';
+					}
+					this.className='active';
+
+					//oTxt.innerHTML='<h2>'+(this.index+1)+'月活動</h2><p>'+arr[this.index]+'</p>';
+
+				}
+			}	
+
+		}
+
+	</script>
+</head>
+<body>
+	<div id="tab" class="calendar">
+
+		<ul>
+			<div class="div1">
+				<li class="active"><h2>1</h2><p>Jan</p></li>
+			</div>
+			<div class="div1">
+				<li><h2>2</h2><p>Feb</p></li>
+			</div>
+			<div class="div1">
+				<li><h2>3</h2><p>Mar</p></li>
+			</div>
+			<div class="div1">
+				<li><h2>4</h2><p>Apr</p></li>
+			</div>
+			<div class="div1">
+				<li><h2>5</h2><p>May</p></li>
+			</div>
+			<div class="div1">
+				<li><h2>6</h2><p>Jun</p></li>
+			</div>
+			<div class="div1">
+				<li><h2>7</h2><p>July</p></li>
+			</div>
+			<div class="div1">
+				<li><h2>8</h2><p>Aug</p></li>
+			</div>
+			<div class="div1">
+				<li><h2>9</h2><p>Sep</p></li>
+			</div>
+			<div class="div1">
+				<li><h2>10</h2><p>Oct</p></li>
+			</div>
+			<div class="div1">
+				<li><h2>11</h2><p>Nov</p></li>
+			</div>
+			<div class="div1">
+				<li><h2>12</h2><p>Dec</p></li>
+			</div>
+		</ul>
+
+		<div id="text1" class="text">
+			<h2>1月 Activity</h2>
+			<p>ohhhohhh, ya.</p>
+		</div>
+
+	</div>
+
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>button selection</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<script>
+		window.onload=function()
+		{
+			var oDiv=document.getElementById('div1')
+			var aBtn=oDiv.getElementsByTagName('input')
+			var aDiv=oDiv.getElementsByTagName('div')
+
+			for(var i=0; i<aBtn.length; i++)
+			{
+				aBtn[i].index=i;
+				aBtn[i].onclick=function()
+				{
+					for(var i=0; i<aBtn.length; i++)
+					{
+						aBtn[i].className='';
+						aDiv[i].style.display='none';
+					}
+					//alert(this.value);
+					this.className='active';
+                    aDiv[this.index].style.display='block';
+				}
+			}
+		}
+
+	</script>
+</head>
+<body>
+	<div id="div1" class="div1">
+		<input class="active" type="button" value="eduction">
+		<input type="button" value="training">
+        <input type="button" value="entoll">
+        <input type="button" value="aboard">
+        <div class="div" style="display:block">1111</div>
+        <div class="div">2222</div>
+        <div class="div">3333</div>
+        <div class="div">4444</div>
+    </div>
+</body>
+</html>
